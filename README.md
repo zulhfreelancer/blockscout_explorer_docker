@@ -10,10 +10,10 @@ For me, I'm not using `puppeth` for my private blockchain setup. Hence, I need t
 
 ### Design
 
-I prefer to separate these 3 components instead of putting them in one container ([link](https://github.com/rjl493456442/go-ethereum/blob/34bbfd840be0724d9ca09d5431927b9c7bc15ad3/cmd/puppeth/module_explorer.go#L33), [link](https://hub.docker.com/r/puppeth/blockscout/dockerfile)):
+I prefer to separate these 3 components rather than putting them in one container ([link](https://github.com/rjl493456442/go-ethereum/blob/34bbfd840be0724d9ca09d5431927b9c7bc15ad3/cmd/puppeth/module_explorer.go#L33), [link](https://hub.docker.com/r/puppeth/blockscout/dockerfile)):
 
-- Geth
-- Postgres
+- Geth (with volume)
+- Postgres (with volume)
 - Explorer
 
 I believe Docker Compose could help me separate them to achieve the design above.
